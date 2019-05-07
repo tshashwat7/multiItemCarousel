@@ -1,0 +1,71 @@
+  .leftLst,  .rightLst { 
+    position:absolute; 
+    top:calc(50% - 20px); 
+    }
+
+.MultiCarousel { 
+    float: left; 
+    overflow: hidden;  
+    width: 100%; 
+    position:relative; 
+}
+    .MultiCarousel .MultiCarousel-inner { 
+        transition: 1s ease all; 
+        float: left; 
+    }
+    .MultiCarousel .MultiCarousel-inner .item { 
+        float: left;
+    }
+    .MultiCarousel .MultiCarousel-inner .item > div {
+        text-align: center; 
+        background-color:grey;
+    }
+     .leftLst { 
+        left: 1em; 
+        color: green;
+        font-size: 30px;
+        cursor: pointer;
+    }
+     .rightLst { 
+        right:1em; 
+        color: green;
+        font-size: 30px;
+        cursor: pointer;
+    }
+     .leftLst.over,  .rightLst.over { 
+        pointer-events: none; 
+        color:#ccc; 
+        cursor: disabled;
+    }
+    .center-align{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cardNavigationVisible{
+        visibility: hidden
+    }
+    .xdce-carte-icon-font-size {
+        font-size: 1.687em;
+      }
+    @media only screen and (max-width: (576px)){
+        .cardNavigationVisible{
+            visibility: visible;
+        }
+      }
+      .carouselParentComp{
+        padding-left: 4em; 
+        padding-right: 4em;
+      }
+      @media only screen and (min-width: 992px) and  (max-width: (1199px)){
+          .carouselParentComp{
+            padding-left: 0em; 
+            padding-right: 0em;
+          }
+          .leftLst{
+              left:-0.5em;          
+            }
+         .rightLst{
+             right: -0.5em;        
+            }
+      }
